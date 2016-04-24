@@ -45,6 +45,10 @@ body {
     }
 }
 
+.breadcrumb > li + li:before {
+    content: '>';
+}
+
 @media (min-width: 768px) {
     .navbar-static-top {
         .navbar-nav {
