@@ -34,7 +34,10 @@ var navItems = [
     },
     {
         label: 'Exclusives',
-        slug: 'exclusives'
+        slug: 'exclusives',
+        icon: {
+            className: 'fa-star'
+        }
     },
     {
         label: 'Top brands',
@@ -42,7 +45,10 @@ var navItems = [
     },
     {
         label: 'Special offer',
-        slug: 'special-offer'
+        slug: 'special-offer',
+        icon: {
+            className: 'fa-tag'
+        }
     }
 ]
 
@@ -60,15 +66,23 @@ var MainNavigation = React.createClass({
         }
 
         return (
-            <nav className="navbar navbar-default navbar-static-top">
+            <div className="navbar navbar-default navbar-static-top">
                 <div className="container">
+                    <div className="navbar-header">
+                        <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span className="sr-only">Toggle navigation</span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                        </button>
+                    </div>
                     <div id="navbar" className="navbar-collapse collapse">
                         <ul className="nav navbar-nav">
                             { items }
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </div>
 
         );
     }
